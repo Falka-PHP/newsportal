@@ -1,0 +1,20 @@
+body {
+    text-align: center;
+    padding: 100px 10%;
+}
+
+footer > h6 {
+    color: gray;
+}
+
+main h2 {
+    color: purple;    
+}
+
+main h4 {
+    color: darkcyan;
+}
+
+main div {
+    padding-bottom: 75px;
+}
