@@ -10,5 +10,6 @@ return [
     'exit'      => 'Вихід',
     'profile'   => 'Профіль',
     '404'       => 'Page 404',
-    'registry_handler' => 'Обробник реєстраційних данни'
+    'registry_handler' => 'Обробник реєстраційних данни',
+    'login_handler' => 'Login verification'
 ];

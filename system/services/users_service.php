@@ -23,8 +23,26 @@ class UsersService extends DbProvider {
         // ...
     }
 
-    public function authenticate() {
-        // ...
+    public function authenticate($login, $pass) {
+        $passw = md5($pass);
+        //$query = 'SELECT COUNT(*) FROM `users` as u WHERE u.login= ? AND u.passw = ?';
+        $query = 'SELECT COUNT(*) FROM `users` as u WHERE u.login="Anna123" AND u.passw="5f01837834945c5878a227f0b950accd"';
+
+        $stmt = $this->_conn->prepare($query);
+        if($stmt === false){echo 'Internal database error!'; return false;}
+        //$stmt->bind_param('ss',$login, $passw);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        if ($result->fetch_row()[0] > 0) {
+            $_SESSION['user'] = $login;
+            return true;
+        }
+        else{
+            return false;
+        }
+
+
+
     }
 
 }

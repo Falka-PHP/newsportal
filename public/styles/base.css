@@ -8,7 +8,7 @@ footer > h6 {
 }
 
 main h2 {
-    color: purple;    
+    color: purple;
 }
 
 main h4 {
@@ -19,7 +19,8 @@ main div {
     padding-bottom: 75px;
 }
 
-#form1{
+#form1,
+#login_form {
     width: 450px;
     margin: 35px auto 25px;
     border: 1px solid silver;
